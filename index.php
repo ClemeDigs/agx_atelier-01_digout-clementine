@@ -9,11 +9,16 @@
 <body>
     <ul>
         <?php
-            $numbers = [3, 777, 64, 358, 17, 199, 300, 836, 2285, 26, 572, 94, 265, 195, 45];
+            $i = 0;
+            while ($i < 15) {
+                $numbers[] = rand(0, 300);
+                $i++;
+            }
+
             foreach ($numbers as $number) {
                 echo '<li';
                 if ($number > 200) {
-                echo ' class="high-number"';
+                    echo ' class="high-number"';
                 };
                 echo '>' . $number . '</li>';
             }
